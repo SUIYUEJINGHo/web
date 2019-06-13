@@ -1,26 +1,50 @@
-// ui-search 定义
+// ui-search组件定义
 $.fn.uiSearch = function(){
 	var ui = $(this);
-
-	// (1) 点击选中框，下拉框展示 默认下拉框不展示
+	// (1) 点击下拉框 则展示信息
 	$(".ui-search-selected" , ui).on("click" , function(){
-		$(".ui-search-select-list" , ui).show();
+		$(".ui-search-select-list" , ui).show("slow");
 		return false;
 	});
-
-	// (2) 点击下拉框内容则先会让选中框变成下拉框内容，之后让选中框消失
+	// (2)点击其它位置则将list隐藏
+	$("body").on("click",function(){
+		$.hide(".ui-search-select-list" , ui);
+		return false;
+	});
+	// (3)点击下拉框中的内容则显示在input框中
 	$(".ui-search-select-list a" , ui).on("click" , function(){
-		$(".ui-search-selected").text($(this).text());
-		$(".ui-search-select-list").hide();
-		return false;
-	});
-
-	// 全局点击时也要处罚关闭下拉框
-	$("body").on("click" , function(){
-		$(".ui-search-select-list").hide();
+		$(".ui-search-input" , ui).val($(this).text());
+		$.hide(".ui-search-select-list" , ui);
 		return false;
 	});
 }
+/*$.fn.extend({
+	uiSearch:function(){
+		var ui = $(this);
+		// (1) 点击下拉框 则展示信息
+		$(".ui-search-selected" , ui).on("click" , function(){
+			$(".ui-search-select-list" , ui).show("slow");
+			return false;
+		});
+		// (2)点击其它位置则将list隐藏
+		$("body").on("click",function(){
+			$.hide(".ui-search-select-list" , ui);
+			return false;
+		});
+		// (3)点击下拉框中的内容则显示在input框中
+		$(".ui-search-select-list a" , ui).on("click" , function(){
+			$(".ui-search-input" , ui).val($(this).text());
+			$.hide(".ui-search-select-list" , ui);
+			return false;
+		});
+	}
+})*/
+// 定义一个全局通用的jquery方法
+$.extend({
+	hide:function(className , fromClassName){
+		$(className ,fromClassName).hide("slow");
+	}
+});
 // ui-Tub 定义
 /**
 * @param {String} header : 所有标题头组件
@@ -41,10 +65,26 @@ $.fn.uiTab = function(header ,content ,hideClass){
 	 });
 }
 
-// 脚本逻辑
+/**
+ * 切换选项卡，从而切换内容组建
+ */
+/*$.fn.extend({
+	uiTab:function(header ,content ,hideClass) {
+		var ui = $(this);
+		var tabs = $(header, ui);
+		var cons = $(content, ui);
+		var prefix = hideClass || "";
+		tabs.on("click" , function(){
+			var index = $(this).index();
+			tabs.removeClass(prefix + "item_focus").eq(index).addClass(prefix + "item_focus");
+			cons.hide().eq(index).show();
+		});
+	}
+});*/
 
+// 脚本逻辑
 $(function(){
 	$(".ui-search").uiSearch();
-	$(".content-tab").uiTab(".caption > .item" , ".block > .item");
+	$(".content-tab").uiTab(".caption > .item" , ".block > .item" , "");
 	$(".content-tab .block .item").uiTab(".block-caption > a", ".block-content > .block-wrap" , "block-capiton-");
 })
