@@ -49,3 +49,84 @@
 	width: 40px;
 	height: 36px;
 }
+/* 左侧菜单栏页面书写 */
+.ui-menu-item{
+	height: 22px;
+	line-height: 22px;
+	padding: 8px 5px 9px 6px;
+	margin-left: 1px;
+}
+.ui-menu-item:hover{
+	background:#fff;
+}
+.ui-menu-item-department{
+	float: left;
+	height: 22px;
+	line-height: 22px;
+	font-size:13px;
+	color:#fff;
+	position: relative;
+	padding-left: 30px;
+}
+.ui-menu-item:hover .ui-menu-item-department{
+	color: #333;
+}
+.ui-menu-item-department:before{
+	display: block;
+	content: "";
+	width: 22px;
+	height: 21px;
+	position:absolute;
+	left:0;
+	top:1px;
+	background: url('../img/icon-menu.jpg') -22px 0 no-repeat;
+}
+.ui-menu-item:hover .ui-menu-item-department:before{
+	background-position-x: 0 ;
+}
+.ui-menu-item-disease{
+	font-size: 12px;
+	color: #d7f3ff;
+	float: right;
+	padding-left: 5px;
+}
+.ui-menu-item:hover .ui-menu-item-disease{
+	color: #868686;
+}
+.ui-menu-item-detail{
+	display: none;
+	position:absolute;
+	top:0;
+	left:190px;
+	width: 500px;
+	height: 392px;
+	background: #fff url(../img/bg-menu.jpg) center no-repeat;
+	padding: 20px 25px 11px 29px;
+}
+.ui-menu-item:hover .ui-menu-item-detail{
+	display: block;
+}
+.ui-menu-item-detail-group{
+	padding-bottom: 20px;
+}
+.ui-menu-item-detail-group-caption{
+	width: 100%;
+	display: block;
+	height: 34px;
+	line-height: 34px;
+	color: #666;
+	font-size: 14px;
+}
+.ui-menu-item-detail-group-list a{
+	display: inline-block;
+	color: #868686;
+	margin-right: 12px;
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+.ui-menu-item-detail-group-list a:hover{
+	color:#006DB3;
+}
+.ui-menu-item-detail-group-list a:after{
+	content:'|';
+}
