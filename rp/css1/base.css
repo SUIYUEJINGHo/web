@@ -296,5 +296,27 @@ select , input{
 	font-size: 14px;
 	color: #666;
 }
+/* 回到顶部插件 */
+.ui-backTop{
+	display:none;
+	position:fixed;
+	right: 2px;
+	bottom: 2px;
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	z-index: 9;
+	background:rgb(102, 102, 102) url(../img/icon-go-up.png) center no-repeat;
+}
+.ui-backTop:hover{
+	background:rgb(102, 102, 102);
+}
+.ui-backTop:hover:after{
+	display:block;
+	content:"回到顶部";
+	line-height: 20px;
+	text-align:center;
+}
+
 
 

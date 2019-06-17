@@ -68,6 +68,7 @@ $.fn.uiTab = function(header ,content ,hideClass){
 /**
  * 切换选项卡，从而切换内容组建
  */
+
 /*$.fn.extend({
 	uiTab:function(header ,content ,hideClass) {
 		var ui = $(this);
@@ -81,10 +82,52 @@ $.fn.uiTab = function(header ,content ,hideClass){
 		});
 	}
 });*/
+$.fn.uiBackTop = function(){
+	var ui = $(this);
+	var el = $('<a class="ui-backTop" href = "#"></a>');
+	ui.append(el);
+
+	var limit = "400";
+
+	$(window).on("scroll" , function(){
+		var top = $("html,body").scrollTop();
+		if(top > limit){
+			el.show("slow");
+		}else{
+			el.hide("slow");
+		}
+	});
+	el.on("click" ,function(){
+		$(window).scrollTop(0);
+	});
+};
+/*$.fn.extend({
+	uiBackTop : function(){
+		var ui = $(this);
+		var el = $('<a class="ui-backTop" href = "#"></a>')
+		ui.append(el);
+		// 当前页面高度
+		// var windowHeight = $(window).height();
+		var windowHeight = "400";
+		$(window).on("scroll" , function(){
+			// 滑动高度
+			var top = $("html,body").scrollTop();
+			if(top > windowHeight){
+				el.show("slow");
+			}else{
+				el.hide("slow");
+			}
+		});
+		$(".ui-backTop").on("click" , function(){
+			$("html,body").scrollTop(0);
+		})
+	}
+})*/
 
 // 脚本逻辑
 $(function(){
 	$(".ui-search").uiSearch();
 	$(".content-tab").uiTab(".caption > .item" , ".block > .item" , "");
 	$(".content-tab .block .item").uiTab(".block-caption > a", ".block-content > .block-wrap" , "block-capiton-");
+	$("body").uiBackTop();
 })
