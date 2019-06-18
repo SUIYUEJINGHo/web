@@ -108,25 +108,37 @@
 }
 .ui-menu-item-detail-group{
 	padding-bottom: 20px;
+	text-align:left;
 }
 .ui-menu-item-detail-group-caption{
-	width: 100%;
-	display: block;
+	width:100%;
 	height: 34px;
 	line-height: 34px;
-	color: #666;
-	font-size: 14px;
+	color:#666;
+	font-size:14px;
 }
 .ui-menu-item-detail-group-list a{
 	display: inline-block;
-	color: #868686;
-	margin-right: 12px;
-	font-size: 12px;
+	color:#868686;
+	font-size:12px;
 	padding-bottom: 5px;
+	margin-right: 12px;
 }
 .ui-menu-item-detail-group-list a:hover{
 	color:#006DB3;
 }
 .ui-menu-item-detail-group-list a:after{
-	content:'|';
+	content:"|";
 }
+
+/** 幻灯片 **/
+.ui-slider{
+	/** 当内规定内容溢出元素框时发的事情 hidden表示隐藏 **/
+	overflow:hidden;
+	width: 544px;
+	height: 414px;
+	position:relative;
+}
+
+
+
