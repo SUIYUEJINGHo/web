@@ -1,0 +1,12 @@
+webpack:WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。
+npm:NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题。
+1，安装node.js选择的是4.4.7版本，安装地址：https://nodejs.org/download/release/v4.4.7/；在windows上安装全是下一步即可。
+  查看node.js是否安装上用node -v查看。
+2，初始化npm 命令npm init 之后全部下一步即可。
+3，安装本地webpack 和全局webpack
+版本都是1.15.0
+全局命令：npm isntall webpack@1.15.0 -g
+本地安装命令：npm isntall webpack@1.15.0 --save-dev
+4，添加各种loader，内容在package.json中devDependencies中添加，用法是 命令行 npm install XXX@版本号 --save-dev
+5，和4配合在webpack.config.js中书写了各种插件的使用，jquery的引入。打包的方式。等等。。。。详情看:webpack.config.js
+
