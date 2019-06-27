@@ -8,5 +8,8 @@ npm:NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部�
 全局命令：npm isntall webpack@1.15.0 -g
 本地安装命令：npm isntall webpack@1.15.0 --save-dev
 4，添加各种loader，内容在package.json中devDependencies中添加，用法是 命令行 npm install XXX@版本号 --save-dev
+在添加webpack-dev-server得时候  还要 安装全局得 webpack-dev-server  命令是：npm install webpack-dev-server@XXX -g
 5，和4配合在webpack.config.js中书写了各种插件的使用，jquery的引入。打包的方式。等等。。。。详情看:webpack.config.js
+附加：
+    因为在package.json上scripts中配置了 webpack-dev-server 得命令 可以在window 上直接启动
 
