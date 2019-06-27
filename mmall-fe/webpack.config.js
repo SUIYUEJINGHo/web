@@ -1,11 +1,13 @@
 // webpack 配置文件
 var webpack            = require('webpack');
 //  打包css用得插件
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin  = require("extract-text-webpack-plugin");
 // 引入打包html用得插件
-var htmlWebpackPlugin = require('html-webpack-plugin');
+var htmlWebpackPlugin  = require('html-webpack-plugin');
 // 获取html打包对象
 var WEBPACK_ENV        = process.env.WEBPACK_ENV || 'dev';
+// 引入path组件
+var path               = require('path');
 var getHtmlConfig = function(name){
      return {
          // 要打包得文件地址
@@ -46,6 +48,14 @@ var config = {
         // jquery ： 引入jquery
         'jquery' : 'window.jQuery'
     },
+    resolve : {
+      alias : {
+          util    : path.join(__dirname,'src' , 'util'),
+          page    : path.join(__dirname,'src' , 'page'),
+          service : path.join(__dirname,'src' , 'service'),
+          image   : path.join(__dirname,'src' , 'image')
+      }
+    },
     module: {
         loaders: [
             { test: /\.css$/, loader:  ExtractTextPlugin.extract("style-loader","css-loader") },
@@ -71,3 +81,4 @@ if('dev' === WEBPACK_ENV){
     config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
 }
 module.exports = config;
+console.log("!!!!" + config.resolve.alias.util);
