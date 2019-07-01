@@ -26,9 +26,9 @@ input[type='checkbox']{
 }
 /** 定宽布局 **/
 .w{
-    width:1080px;
-    margin : 0 auto;
     position : relative;
+    margin : 0 auto;
+    width:1080px;
     /** 除了让内容不溢出边框外，再就是清除浮动 **/
     overflow : hidden;
 }
@@ -75,6 +75,7 @@ input[type='checkbox']{
     padding : 0 10px;
     font-size : 12px;
 }
+/** ladding : 加载ladding页面**/
 .ladding{
     background : url('../../image/icon/loading.gif');
     display : block;
