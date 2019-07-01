@@ -14,10 +14,10 @@ var getHtmlConfig = function(name){
          template : './src/view/' + name + '.html',
          // 打包到得文件地址
          filename : 'view/' + name + '.html',
-         // 把js写入到html的位置：{
-         // true 默认值，script标签位于html文件的 body 底部
-         // body script标签位于html文件的 body 底部
-         // head script标签位于html文件的 head中
+         //  把js写入到html的位置：{
+         //  true 默认值，script标签位于html文件的 body 底部
+         //  body script标签位于html文件的 body 底部
+         //  head script标签位于html文件的 head中
          //  false 不插入生成的js文件，这个几乎不会用到的
          // }
          inject : 'true',
@@ -50,10 +50,11 @@ var config = {
     },
     resolve : {
       alias : {
-          util    : path.join(__dirname,'src' , 'util'),
-          page    : path.join(__dirname,'src' , 'page'),
-          service : path.join(__dirname,'src' , 'service'),
-          image   : path.join(__dirname,'src' , 'image')
+          node_modules    : path.join(__dirname,'node_modules'),
+          util             : path.join(__dirname,'src' , 'util'),
+          page             : path.join(__dirname,'src' , 'page'),
+          service          : path.join(__dirname,'src' , 'service'),
+          image            : path.join(__dirname,'src' , 'image')
       }
     },
     module: {
@@ -81,4 +82,4 @@ if('dev' === WEBPACK_ENV){
     config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
 }
 module.exports = config;
-console.log("!!!!" + config.resolve.alias.util);
+console.log("!!!!" + config.resolve.alias.node_modules);

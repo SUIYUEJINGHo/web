@@ -13,4 +13,5 @@ npm:NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部�
 附加：
     因为在package.json上scripts中配置了 webpack-dev-server 得命令 可以在window 上直接启动
 6，安装hogan组件，用于渲染html模板和数据的 命令： npm install hogan --save
+7，安装组件font-awesome(图标组件) 命令： npm install font-awesome --save
 
