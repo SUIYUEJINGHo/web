@@ -1,0 +1,21 @@
+/** 左侧区域内容 **/
+.nav-side{
+    float : left;
+    width : 130px;
+    min-height: 100px;
+}
+.nav-side .nav-item{
+    line-height: 30px;
+    font-size: 13px;
+}
+.nav-side .nav-item .link{
+    color : #888;
+}
+.nav-side .nav-item.active .link{
+    color: #c60023;
+}
+/** 右侧区域内容 **/
+.content.with-nav{
+    float : left;
+    width : 950px;
+}
