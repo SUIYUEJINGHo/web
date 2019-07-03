@@ -8,7 +8,7 @@ var htmlWebpackPlugin  = require('html-webpack-plugin');
 var WEBPACK_ENV        = process.env.WEBPACK_ENV || 'dev';
 // 引入path组件
 var path               = require('path');
-var getHtmlConfig = function(name){
+var getHtmlConfig = function(name ,title){
      return {
          // 要打包得文件地址
          template : './src/view/' + name + '.html',
@@ -20,7 +20,8 @@ var getHtmlConfig = function(name){
          //  head script标签位于html文件的 head中
          //  false 不插入生成的js文件，这个几乎不会用到的
          // }
-         inject : 'true',
+         title  : title,
+         inject  : 'true',
          hash   : 'true',
          // chunks主要用于多入口文件，当你有多个入口文件，那就回编译后生成多个打包后的文件，那么chunks 就能选择你要使用那些js文件
          chunks : ['common' , name]
@@ -29,9 +30,10 @@ var getHtmlConfig = function(name){
 var config = {
     // 入口文件 可以配置多个文件
     entry : {
-      'common': ['./src/page/common/index.js'],
-      'index' : ['./src/page/index/index.js'],
-      'login' : ['./src/page/login/index.js']
+      'common' : ['./src/page/common/index.js'],
+      'index'  : ['./src/page/index/index.js'],
+      'login'  : ['./src/page/login/index.js'],
+      'result' : ['./src/page/result/index.js']
     },
     // output 选项控制 webpack 如何向硬盘写入编译文件。注意，即使可以存在多个入口起点，但只指定一个输出配置
     output : {
@@ -76,8 +78,9 @@ var config = {
         }),
         //  打包css用得模块
         new ExtractTextPlugin("css/[name].css"),
-        new htmlWebpackPlugin(getHtmlConfig('index')),
-        new htmlWebpackPlugin(getHtmlConfig('login'))
+        new htmlWebpackPlugin(getHtmlConfig('index' , '首页')),
+        new htmlWebpackPlugin(getHtmlConfig('login' , '用户登陆')),
+        new htmlWebpackPlugin(getHtmlConfig('result' , '操作结果'))
     ]
 };
 if('dev' === WEBPACK_ENV){
