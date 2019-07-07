@@ -30,10 +30,10 @@ var getHtmlConfig = function(name ,title){
 var config = {
     // 入口文件 可以配置多个文件
     entry : {
-      'common' : ['./src/page/common/index.js'],
-      'index'  : ['./src/page/index/index.js'],
-      'login'  : ['./src/page/login/index.js'],
-      'result' : ['./src/page/result/index.js']
+      'common'       : ['./src/page/common/index.js'],
+      'index'        : ['./src/page/index/index.js'],
+      'user-login'  : ['./src/page/user-login/index.js'],
+      'result'       : ['./src/page/result/index.js']
     },
     // output 选项控制 webpack 如何向硬盘写入编译文件。注意，即使可以存在多个入口起点，但只指定一个输出配置
     output : {
@@ -79,7 +79,7 @@ var config = {
         //  打包css用得模块
         new ExtractTextPlugin("css/[name].css"),
         new htmlWebpackPlugin(getHtmlConfig('index' , '首页')),
-        new htmlWebpackPlugin(getHtmlConfig('login' , '用户登陆')),
+        new htmlWebpackPlugin(getHtmlConfig('user-login' , '用户登陆')),
         new htmlWebpackPlugin(getHtmlConfig('result' , '操作结果'))
     ]
 };

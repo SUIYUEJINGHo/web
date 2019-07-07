@@ -1,0 +1,81 @@
+/* 最外层容器 */
+.page-wrap{
+    background: #e72955;
+    padding : 80px 0;
+}
+.user-con{
+    position:relative;
+    width :400px;
+    margin: 0 auto;
+    background: #fff;
+}
+.user-title{
+    text-align: center;
+    padding:10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    color : #666;
+}
+.user-box{
+    padding: 20px;
+}
+/* 错误提示框 */
+.user-con .user-box .error-item{
+    position:relative;
+    padding: 4px 0 4px 40px ;
+    border: 1px solid red;
+    color : red;
+    background: #fde9e9;
+    margin-bottom: 10px;
+    display: none;
+}
+.user-con .user-box .error-icon{
+    position : absolute;
+    top:50%;
+    left:14px;
+    margin-top: -6px;
+    font-size: 14px;
+}
+.user-con .user-item{
+    position:relative;
+    margin-bottom: 20px;
+}
+.user-con .user-item .user-label{
+    position: absolute;
+    background: #f3f3f3;
+    width: 40px;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    color: #d3d3d3;
+    border-right: 1px solid #bdbdbd;
+}
+.user-con .user-item .user-content{
+    padding : 10px 0 10px 50px;
+    width : 308px;
+    height:18px;
+    line-height: 18px;
+    font-size: 15px;
+    border: 1px solid #bdbdbd;
+    outline: none;
+}
+.user-con .btn-submit{
+    width: 100%;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 20px;
+}
+/* 跳转链接 */
+.user-con .link-item{
+    text-align: right;
+    margin-top : 10px;
+}
+.user-con .link-item .link{
+    margin-left: 10px;
+    color : #999;
+}
+
