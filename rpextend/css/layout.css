@@ -1,0 +1,75 @@
+/** 基础页面布局样式 **/
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+a{
+    text-decoration:none;
+}
+/*
+    function : 通用格局样式
+    desc : 通用格局样式不清除浮动版本，并且清除浮动，推荐。
+*/
+.wrap{
+    position : relative;
+    margin:0 auto;
+    width: 1080px;
+}
+/*
+    function : 通用格局样式
+    desc : 可以格式化页面，并且清除浮动，推荐。
+*/
+.wrapExtend{
+    position : relative;
+    margin:0 auto;
+    width: 1080px;
+    /** 可以清除浮动 **/
+    overflow:hidden;
+}
+/**
+    function：清除浮动
+    desc ：利用伪类来给标签添加清除浮动属性
+ */
+.clearfix:after{
+    clear:both;
+    display : block;
+    content: '';
+    zoom: 1;
+    height: 0;
+    line-height: 0;
+}
+p{
+    margin:0;
+    padding: 0;
+    display:inline-block;
+}
+i{
+    font-style:normal;
+    display:inline-block;
+}
+select , input{
+    border:none;
+    outline:none;
+}
+.btn{
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    font-size: 12px;
+    background-color: #006DB3;
+    font-weight: bold;
+    color: #fff;
+    outline:none;
+    /** 在文本某处添加一个线条 **/
+    text-decoration:none;
+    border: none;
+    cursor:pointer;
+    vertical-align: middle;
+}
+.link{
+    color: #006DB3;
+    cursor : pointer;
+    text-decoration: none;
+}
