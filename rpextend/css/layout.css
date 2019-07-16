@@ -23,7 +23,7 @@ a{
 .wrapExtend{
     position : relative;
     margin:0 auto;
-    width: 1080px;
+    width: 1020px;
     /** 可以清除浮动 **/
     overflow:hidden;
 }
@@ -49,8 +49,8 @@ i{
     display:inline-block;
 }
 select , input{
-    border:none;
     outline:none;
+    border:none;
 }
 .btn{
     display: inline-block;
