@@ -13,21 +13,64 @@
     cursor: pointer;
 }
 .header-title{
-    display: inline-block;
-    vertical-align: middle;
+    float:right;
     font-size: 24px;
     font-weight: bold;
     color: #00B3EA;
-    padding-bottom: 50px;
     cursor: pointer;
+    margin-top: 12px;
 }
 .header-content{
     float: left;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 .header-input{
+    position:relative;
     float: left;
+    width: 205px;
+    height: 40px;
+    background-color: #f4f4f4;
+    border-radius:5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    line-height: 45px;
+    padding-left: 10px;
+}
+.input-info{
+    position:absolute;
+    left:30px;
+    top:0;
+    margin-top: -3px;
+}
+.header-input input{
+    background: none;
+    width: 200px;
+    height: 30px;
+}
+.header-content img{
+    width: 16px;
+    height: 16px;
+}
+.header-btn{
+    float : right;
+    margin-top: 10px;
+}
+.header-btn .btn{
+    height: 38px;
+    border-radius: 5px;
+    background-color: #00B3EA;
 }
 .header-right-info{
-    float : right;
+    float : left;
+    margin-left: 30px;
+    padding-top:15px;
+    font-size:15px;
+    line-height: 30px;
+}
+.header-right-info .help{
+    margin-left: 20px;
+}
+.nav{
+    height: 1000px;
+    border:1px solid red;
 }

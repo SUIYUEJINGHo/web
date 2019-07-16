@@ -26,6 +26,7 @@ a{
     width: 1020px;
     /** 可以清除浮动 **/
     overflow:hidden;
+    border:1px solid red;
 }
 /**
     function：清除浮动
@@ -58,7 +59,7 @@ select , input{
     padding: 0 20px;
     line-height: 40px;
     font-size: 12px;
-    background-color: #006DB3;
+    background-color: #00B3EA;
     font-weight: bold;
     color: #fff;
     outline:none;
@@ -69,7 +70,7 @@ select , input{
     vertical-align: middle;
 }
 .link{
-    color: #006DB3;
+    color: #00B3EA;
     cursor : pointer;
     text-decoration: none;
 }
