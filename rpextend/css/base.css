@@ -1,76 +1,95 @@
 .header{
-    width: 100%;
-    padding : 10px 0;
+    padding: 10px;
     position:fixed;
+    width: 100%;
     background-color: #fff;
 }
-.logo{
+.header-logo{
+    display: block;
     float: left;
 }
-.logo img{
+.header-logo img{
     width: 75px;
     height: 60px;
-    cursor: pointer;
 }
-.header-title{
-    float:right;
-    font-size: 24px;
+.header-logo span{
+    display: block;
+    float: right;
+    padding-top: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #00B3EA;
-    cursor: pointer;
-    margin-top: 12px;
+    color: #00b3ea;
 }
 .header-content{
-    float: left;
-    margin-left: 50px;
+    float:left;
+    margin-left: 40px;
 }
-.header-input{
+.header-search{
+    float:left;
     position:relative;
-    float: left;
-    width: 205px;
-    height: 40px;
-    background-color: #f4f4f4;
-    border-radius:5px;
-    margin-right: 10px;
     margin-top: 10px;
-    line-height: 45px;
-    padding-left: 10px;
+    background: #f4f4f4;
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 5px;
 }
-.input-info{
+.header-img{
+    float:left;
     position:absolute;
-    left:30px;
-    top:0;
-    margin-top: -3px;
+    top:12px;
+    left: 10px;
 }
-.header-input input{
-    background: none;
-    width: 200px;
-    height: 30px;
-}
-.header-content img{
+.header-img img{
     width: 16px;
     height: 16px;
 }
-.header-btn{
-    float : right;
+.header-input{
+    float: left;
+    position:absolute;
+    top:7px;
+    left: 30px;
+}
+.header-input input{
+    background-color:transparent;
+}
+.btn{
     margin-top: 10px;
 }
-.header-btn .btn{
-    height: 38px;
-    border-radius: 5px;
-    background-color: #00B3EA;
+.link{
+    display: block;
+    float: left;
+    padding: 20px 10px 0 20px;
 }
-.header-right-info{
-    float : left;
-    margin-left: 30px;
-    padding-top:15px;
-    font-size:15px;
-    line-height: 30px;
+.floater{
+    position:fixed;
+    right: 0;
+    top:50%;
+    margin-top: -110px;
+    width: 160px;
+    height: 220px;
 }
-.header-right-info .help{
-    margin-left: 20px;
+.importad{
+    position:fixed;
+    left:0;
+    top:50%;
+    margin-top: -150px;
+    width: 210px;
+    height: 348px;
+    background: url("../img/webNotice.png") center no-repeat;
 }
-.nav{
-    height: 1000px;
-    border:1px solid red;
+.importad span{
+    display: block;
+    padding: 80px 10px 0 36px;
+    font-size: 14px;
+    color: #7f7f7f;
+}
+.close{
+    position:fixed;
+    top:50%;
+    margin-top: -160px;
+    left:200px;
+    width: 19px;
+    height: 19px;
+    background: url("../img/index-ewmclose.png") center no-repeat;
 }

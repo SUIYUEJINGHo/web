@@ -26,7 +26,6 @@ a{
     width: 1020px;
     /** 可以清除浮动 **/
     overflow:hidden;
-    border:1px solid red;
 }
 /**
     function：清除浮动
