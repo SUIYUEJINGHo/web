@@ -3,6 +3,8 @@
     position:fixed;
     width: 100%;
     background-color: #fff;
+    z-index: 1000;
+    box-shadow:0 0 9px 0 #ddd; //顶部阴影
 }
 .header-logo{
     display: block;
@@ -73,7 +75,7 @@
     position:fixed;
     left:0;
     top:50%;
-    margin-top: -150px;
+    margin-top: -130px;
     width: 210px;
     height: 348px;
     background: url("../img/webNotice.png") center no-repeat;
@@ -87,9 +89,36 @@
 .close{
     position:fixed;
     top:50%;
-    margin-top: -160px;
-    left:200px;
+    margin-top: -140px;
+    left:190px;
     width: 19px;
     height: 19px;
     background: url("../img/index-ewmclose.png") center no-repeat;
+}
+.nav{
+    position:fixed;
+    width: 100%;
+    height: 40px;
+    padding-top:83px;
+    z-index: 999;
+    background-color: #f7fcff;
+}
+.ul-item{
+    width: 100%;
+    height: 40px;
+    line-height: 10px;
+}
+.ul-item li{
+    display: inline-block;
+    float:left;
+    padding: 0 50px;
+    font-size: 14px;
+    color:#666;
+}
+.banner-item {
+    padding-top: 124px;
+}
+.banner-box{
+    height: 1000px;
+    border:1px solid red;
 }
