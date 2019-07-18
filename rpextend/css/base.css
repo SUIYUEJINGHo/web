@@ -69,7 +69,7 @@
     width: 160px;
     height: 220px;
 }
-.importad{
+.import-ad{
     position:fixed;
     left:0;
     top:50%;
@@ -78,7 +78,7 @@
     height: 348px;
     background: url("../img/webNotice.png") center no-repeat;
 }
-.importad span{
+.import-ad span{
     display: block;
     padding: 80px 10px 0 36px;
     font-size: 14px;
